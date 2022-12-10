@@ -2,22 +2,23 @@ import * as React from 'react';
 import './style.css';
 
 function Header(props) {
-  return(
+  return (
     <div>
       <h1>Welcome {props.name}!</h1>
     </div>
-  )
+  );
 }
 
-const data = [
-  {
+const Data = () => {
+  const [data, setData] = React.useState([
+    {
       id: 1,
       text: 'Hello world',
       bool: true,
     },
     {
       id: 2,
-      text: 'What\' up',
+      text: "What' up",
       bool: false,
     },
     {
@@ -25,20 +26,21 @@ const data = [
       text: 'Good',
       bool: false,
     },
-  ]
+  ])
 
-const Data = () => {
-  return(
+  return (
     <div>
-      {data.map((i) => (<h3> {i.text} </h3>))}
+      {data.map((i) => (
+        <h3> {i.text} </h3>
+      ))}
     </div>
-  )
-}
+  );
+};
 
 export default function App() {
   return (
     <div>
-      <Header name='Thiha'/>
+      <Header name="Thiha" />
       <Data />
     </div>
   );
