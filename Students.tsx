@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './style.css';
 
 export default function Data() {
 
@@ -107,8 +108,8 @@ const [data, setData] = React.useState([
 
 return(
   <div>
-    <table border='1'> 
-    <tr>
+    <table className='table'> 
+    <tr className='table_header'>
         <td>No</td>
         <td>Name</td>
         <td>E-mail</td>
