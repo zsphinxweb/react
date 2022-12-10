@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { FaLightbulb} from 'react-icons/fa'
 import './style.css';
 
 function Header(props) {
@@ -28,10 +29,12 @@ const Data = () => {
     },
   ])
 
+
   return (
+
     <div>
       {data.map((i) => (
-        <h3> {i.text} </h3>
+        <h5> {i.text} <FaLightbulb /></h5>
       ))}
     </div>
   );
